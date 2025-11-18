@@ -30,7 +30,7 @@ int main(int argc, char** argv) {
             "Hello World",
             attrs.width,
             attrs.height,
-            SDL_WINDOW_RESIZABLE);
+            SDL_WINDOW_FULLSCREEN);
 
     renderer = SDL_CreateRenderer(window, NULL);
 
