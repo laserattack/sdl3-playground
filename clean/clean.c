@@ -3,7 +3,7 @@
 #include <SDL3/SDL_main.h>
 #include <stdio.h>
 
-#define LIMIT_FPS 100
+#define FPS_LIMIT 100
 
 /*
 its faster than
@@ -35,7 +35,7 @@ int main(int argc, char** argv) {
     renderer = SDL_CreateRenderer(window, NULL);
 
     printf("Renderer name: %s\n", SDL_GetRendererName(renderer));
-    printf("FPS limit: %d\n", LIMIT_FPS);
+    printf("FPS limit: %d\n", FPS_LIMIT);
     printf("Window size: %dx%d\n", attrs.width, attrs.height);
 
     SDL_Event Event;
@@ -74,8 +74,8 @@ int main(int argc, char** argv) {
 
         // milliseconds
         Uint64 frame_time = SDL_GetTicks() - frame_start;
-        if (frame_time < 1000.0 / LIMIT_FPS) {
-            SDL_Delay((Uint32)(1000.0 / LIMIT_FPS - frame_time));
+        if (frame_time < 1000.0 / FPS_LIMIT) {
+            SDL_Delay((Uint32)(1000.0 / FPS_LIMIT - frame_time));
         }
     }
 
