@@ -6,8 +6,8 @@ CC = gcc
 CFLAGS = -Wall -Wextra
 LDFLAGS = -lSDL3 -lX11
 
-TARGET = clean
-SRC = $(TARGET).c
+TARGET = clean.elf
+SRC = clean.c
 
 default: all
 
